@@ -1,8 +1,8 @@
 const productos = [
     { id: 1, nombre: "Camiseta", precio: 5000 },
     { id: 2, nombre: "Pantalón", precio: 9000 },
-    { id: 3, nombre: "Zapatillas", precio: 15000 },
-    { id: 4, nombre: "Gorra", precio: 3000 }
+    { id: 3, nombre: "Zapatos", precio: 15000 },
+    { id: 4, nombre: "Gorro", precio: 3000 }
 ];
 
 let carrito = [];
