@@ -11,9 +11,17 @@ function simuladorDeCompras() {
     alert("Bienvenido al Simulador de Compras");
     while (true) {
         let mensaje = "Productos:\n";
-        productos.forEach(p => mensaje += `${p.id}. ${p.nombre} - $${p.precio}\n`);
+        for (let i = 0; i < productos.length; i++) {
+            mensaje += productos[i].id + ". " + productos[i].nombre + " - $" + productos[i].precio + "\n";
+        }
         let seleccion = parseInt(prompt(mensaje + "Ingrese el número del producto:"));
-        let producto = productos.find(p => p.id === seleccion);
+        let producto = null;
+        for (let i = 0; i < productos.length; i++) {
+            if (productos[i].id === seleccion) {
+                producto = productos[i];
+                break;
+            }
+        }
         if (producto) {
             carrito.push(producto);
             alert(producto.nombre + " agregado.");
@@ -27,10 +35,13 @@ function simuladorDeCompras() {
         alert("No hay productos en el carrito.");
         return;
     }
-    let total = carrito.reduce((acc, p) => acc + p.precio, 0);
+    let total = 0;
     let resumen = "Resumen:\n";
-    carrito.forEach((p, i) => resumen += `${i + 1}. ${p.nombre} - $${p.precio}\n`);
-    resumen += `Total: $${total}`;
+    for (let i = 0; i < carrito.length; i++) {
+        resumen += (i + 1) + ". " + carrito[i].nombre + " - $" + carrito[i].precio + "\n";
+        total += carrito[i].precio;
+    }
+    resumen += "Total: $" + total;
     alert(resumen);
     console.log(resumen);
 }
