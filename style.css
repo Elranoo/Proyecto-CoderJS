@@ -1,0 +1,117 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 32px 24px 24px 24px;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(44, 62, 80, 0.12);
+}
+
+h1 {
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #4a5568;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f1f5f9;
+    border-radius: 8px;
+    padding: 14px 18px;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.04);
+    font-size: 1.08em;
+}
+
+.button {
+    padding: 8px 18px;
+    background: linear-gradient(90deg, #38b2ac 0%, #4299e1 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(66, 153, 225, 0.08);
+    outline: none;
+}
+
+#finalizar.button {
+    background: #38a169;
+    box-shadow: 0 2px 8px rgba(56, 211, 159, 0.12);
+}
+
+#finalizar.button:hover {
+    background: #2f855a;
+    transform: translateY(-2px) scale(1.04);
+}
+
+.button:hover, .button:focus {
+    background: linear-gradient(90deg, #319795 0%, #2b6cb0 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+
+#carrito, #resumen {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-top: 18px;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.04);
+    font-size: 1em;
+}
+
+#carrito ul, #resumen ul {
+    padding-left: 18px;
+    margin: 8px 0 0 0;
+}
+
+#carrito li, #resumen li {
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#carrito button {
+    background: #e53e3e;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 0.95em;
+    border-radius: 4px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#carrito button:hover {
+    background: #c53030;
+}
+
+strong {
+    color: #2b6cb0;
+}

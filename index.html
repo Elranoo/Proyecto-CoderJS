@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html lang="es"></html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Compras</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Simulador de Compras</h1>
-    <p>
-        El simulador permite al usuario seleccionar productos de una lista, calcula el total de la compra y decide si desea continuar comprando o finalizar. 
-    </p>
+    <div class="container">
+        <h1>Simulador de Compras</h1>
+        <p>
+            Selecciona productos de la lista, agrégalos al carrito y consulta el total de tu compra.
+        </p>
+        <div id="productos" class="product-list"></div>
+        <button id="finalizar" class="button" style="display:none;">Finalizar Compra</button>
+        <div id="carrito" style="margin-top:20px;"></div>
+        <div id="resumen" style="margin-top:20px;"></div>
+    </div>
     <script src="js/simulador.js"></script>
 </body>
 </html>
